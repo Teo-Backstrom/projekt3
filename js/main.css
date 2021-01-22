@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+/* ELEMENTS */
+
+* + p {
+  margin-top: 1rem;
+}
+
+/* HEADINGS */
+
+.box h2.underline,
+.box h3.underline,
+.box h4.underline,
+.box h5.underline,
+.box h6.underline {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid;
+}
+
+.box h2.accent,
+.box h3.accent,
+.box h4.accent,
+.box h5.accent,
+.box h6.accent {
+  color: cyan;
+}
+
+/* BOX */
+
+.box {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  margin: 1.5rem;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.rounded {
+  border-radius: 1rem;
+}
+
+/* GRID */
+
+.grid {
+  display: grid;
+  max-width: 100%;
+}
+
+.fifty-fifty {
+  grid-template-columns: 1fr 1fr;
+}
+
+.three-col-even {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.four-col-even {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.five-col-even {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.ten-col-even {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.sido-col-even {
+  grid-template-columns: 1fr 9fr;
+}
+
+.grid.centered {
+  place-items: center;
+}
