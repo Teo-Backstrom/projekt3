@@ -57,32 +57,55 @@ body {
 
 .grid {
   display: grid;
-  max-width: 100%;
+  width: 80vh;
+  height: 80vh;
+  margin: auto;
 }
 
-.fifty-fifty {
-  grid-template-columns: 1fr 1fr;
-}
-
-.three-col-even {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.four-col-even {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.five-col-even {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
 .ten-col-even {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-.sido-col-even {
-  grid-template-columns: 1fr 9fr;
+.ten-row-even {
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .grid.centered {
   place-items: center;
+}
+
+.center {
+  align-items: center;
+}
+
+.green {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  grid-row-start: 1;
+  grid-row-end: 9;
+  grid-column: 8;
+  background-color: green;
+}
+
+.red {
+  display: flex;
+  justify-content: space-around;
+  grid-row: 9;
+  grid-column-start: 1;
+  grid-column-end: 8;
+  background-color: red;
+}
+
+.blue {
+  display: flex;
+  justify-content: space-around;
+  grid-row: 9;
+  grid-column-start: 1;
+  grid-column-end: 8;
+  background-color: blue;
+}
+
+.green-square {
+  border-color: black solid 10px;
 }
