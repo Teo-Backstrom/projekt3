@@ -103,11 +103,44 @@ body {
   grid-column-start: 10;
   grid-column-end: 14;
 }
+
+.green-spawn {
+  grid-area: 2 / 11 / 6 / 15;
+  border: 5px solid green;
+}
+
 .green-square {
   background-color: green;
   height: 100%;
   width: 100%;
   border-radius: 100%;
+}
+
+.green-player {
+  background-color: rgb(0, 80, 0);
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.G-player1 {
+  grid-column: 12;
+  grid-row: 3;
+}
+
+.G-player2 {
+  grid-column: 12;
+  grid-row: 4;
+}
+
+.G-player3 {
+  grid-column: 13;
+  grid-row: 3;
+}
+
+.G-player4 {
+  grid-column: 13;
+  grid-row: 4;
 }
 
 .red {
@@ -135,11 +168,43 @@ body {
   grid-column: 7;
 }
 
+.red-spawn {
+  grid-area: 2 / 2 / 6 / 6;
+  border: 5px solid red;
+}
+
 .red-square {
   background-color: red;
   border-radius: 100%;
   height: 100%;
   width: 100%;
+}
+
+.red-player {
+  background-color: rgb(180, 0, 0);
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.R-player1 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.R-player2 {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.R-player3 {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+.R-player4 {
+  grid-column: 4;
+  grid-row: 4;
 }
 
 .blue {
@@ -168,11 +233,43 @@ body {
   grid-column-end: 7;
 }
 
+.blue-spawn {
+  grid-area: 11 / 2 / 15 / 6;
+  border: 5px solid blue;
+}
+
 .blue-square {
   background-color: blue;
   height: 100%;
   width: 100%;
   border-radius: 100%;
+}
+
+.blue-player {
+  background-color: rgb(0, 0, 175);
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.B-player1 {
+  grid-column: 3;
+  grid-row: 12;
+}
+
+.B-player2 {
+  grid-column: 3;
+  grid-row: 13;
+}
+
+.B-player3 {
+  grid-column: 4;
+  grid-row: 12;
+}
+
+.B-player4 {
+  grid-column: 4;
+  grid-row: 13;
 }
 
 .yellow {
@@ -200,6 +297,11 @@ body {
   grid-column: 9;
 }
 
+.yellow-spawn {
+  grid-area: 11 / 11 / 15 / 15;
+  border: 5px solid yellow;
+}
+
 .yellow-square {
   background-color: yellow;
   border-radius: 100%;
@@ -207,7 +309,29 @@ body {
   width: 100%;
 }
 
-.spawn-yellow {
-  grid-area: 16 / 13 / 16 / 13;
-  background-color: yellow;
+.yellow-player {
+  background-color: rgb(160, 160, 0);
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.Y-player1 {
+  grid-column: 12;
+  grid-row: 12;
+}
+
+.Y-player2 {
+  grid-column: 12;
+  grid-row: 13;
+}
+
+.Y-player3 {
+  grid-column: 13;
+  grid-row: 12;
+}
+
+.Y-player4 {
+  grid-column: 13;
+  grid-row: 13;
 }
