@@ -296,3 +296,8 @@ body {
   grid-column: 13;
   grid-row: 13;
 }
+
+button {
+  display: flex;
+  margin: auto;
+}
