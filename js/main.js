@@ -1,44 +1,43 @@
 
-let A = 0;
-let B = 0;
-let C = 0;
-let D = 0;
-let E = 0;
-let F = 0;
-let G = 0;
-let H = 0;
-let I = 0;
-let J = 0;
-let K = 0;
-let L = 0;
-let M = 0;
-let N = 0;
-let O = 0;
-let P = 0;
+
+
+
+let Red1 = 0;
+let Red2 = 0;
+let Red3 = 0;
+let Red4 = 0;
+let Green1 = 0;
+let Green2 = 0;
+let Green3 = 0;
+let Green4 = 0;
+let Blue1 = 0;
+let Blue2 = 0;
+let Blue3 = 0;
+let Blue4 = 0;
+let Yellow1 = 0;
+let Yellow2 = 0;
+let Yellow3 = 0;
+let Yellow4 = 0;
 
 let val = 0;
+let flagga = false;
 
-function tärning() {
-    var dice = {
-        sides: 6,
-        roll: function () {
-          var randomNumber = Math.floor(Math.random() * this.sides) + 1;
-          return randomNumber;
+let currentPlayer = 0;
+let playerClassname = ["redPlayer","greenPlayer","bluePlayer","yellowPlayer"]
+let playerPositions = [0,0,0,0];
+
+ function tärning () {
+         return Math.floor(Math.random() * 6) + 1;
         }
-      }
-    
-      function printNumber(number) {
-        var placeholder = document.getElementById('placeholder');
-        placeholder.innerHTML = number;
-      }
-      
-      var button = document.getElementById('button');
-      
-      button.onclick = function() {
-        var result = dice.roll();
-        printNumber(result);
-      };
-}
+
+        let playerXArray = [
+            [3,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7],
+            [3,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7],
+            [4,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7],
+            [4,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7],
+            
+        ]
+
 
   
 
@@ -76,7 +75,12 @@ let yellow3YPosMoment = [13,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7
 let yellow4XPosMoment = [13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,12,11,10,9];
 let yellow4YPosMoment = [13,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,3,4,5,6,7,7,7,7,7,8,8,8,8,8];
 
-function r1Pos(R1) {
+function move(playerClassname, position, xArray, yArray) {
+    document.querySelector("." + playerClassname).style.gridColumn = xArray[position];
+    document.querySelector("." + playerClassname).style.gridRow = yArray[position];
+}
+
+/*function r1Pos(R1) {
 document.querySelector(".R-player1").style.gridColumn = red1XPosMoment[R1];   
 document.querySelector(".R-player1").style.gridRow = red1YPosMoment[R1];   
 }
@@ -144,6 +148,7 @@ function y4Pos(Y4) {
 document.querySelector(".Y-player4").style.gridColumn = yellow4XPosMoment[Y4];   
 document.querySelector(".Y-player4").style.gridRow = yellow4YPosMoment[Y4];   
 }
+*/
 
 
  /*function dice(){
@@ -153,7 +158,7 @@ document.querySelector(".Y-player4").style.gridRow = yellow4YPosMoment[Y4];
 
 
 function redChoise(){
-    let flagga = false;
+    flagga = false;
     while (flagga = false) {
       if (document.querySelector(".red1Button").clicked == true) {
         val = 1;
@@ -175,7 +180,7 @@ function redChoise(){
 }
 
 function greenChoise() {
-    let flagga = false;
+    flagga = false;
     while (flagga = false) {
         if(document.querySelector(".green1Button").clicked == true){
             val = 5;
@@ -197,7 +202,7 @@ function greenChoise() {
 }
 
 function blueChoise () {
-    let flagga = false;
+    flagga = false;
     while (flagga = false) {
         if(document.querySelector(".blue1Button").clicked == true){
             val = 9;
@@ -220,7 +225,7 @@ function blueChoise () {
 }
 
 function yellowChoise() {
-    let flagga = false;
+    flagga = false;
     while (flagga = false) {
         if(document.querySelector(".yellow1Button").clicked == true){
             val = 13;
@@ -246,67 +251,67 @@ function movePice() {
 
     switch (val) {
         case 1:
-            A = A + randomNumber;
+            Red1 = Red1 + tärning();
             break;
 
         case 2:
-            B = B + randomNumber;
+            Red2 = Red2 + tärning();
             break;
 
         case 3:
-            C = C + randomNumber;
+            Red3 = Red3 + tärning();
             break;
 
         case 4:
-            D = D + randomNumber;
+            Red4 = Red4 + tärning();
             break;
         
         case 5:
-            E = E + randomNumber;
+            Green1 = Green1 + tärning();
             break;
 
         case 6:
-            F = F + randomNumber;
+            Green2 = Green2 + tärning();
             break;
 
         case 7:
-            G = G + randomNumber;
+            Green3 = Green3 + tärning();
             break;
 
         case 8:
-            H = H + randomNumber;
+            Green4 = Green4 + tärning();
             break;
 
         case 9:
-            I = I + randomNumber;
+            Blue1 = Blue1 + tärning();
             break;
 
         case 10:
-            J = J + randomNumber;
+            Blue2 = Blue2 + tärning();
             break;
 
         case 11:
-            K = K + randomNumber;
+            Blue3 = Blue3 + tärning();
             break;
         
         case 12:
-            L = L + randomNumber;
+            Blue4 = Blue4 + tärning();
             break;
 
         case 13:
-            M = M + randomNumber;
+            Yellow1 = Yellow1 + tärning();
             break;
 
         case 14:
-            N = N + randomNumber;
+            Yellow2 = Yellow2 + tärning();
             break;
 
         case 15:
-            O = O + randomNumber;
+            Yellow3 = Yellow3 + tärning();
             break;
         
         case 16:
-            P = P + randomNumber;
+            Yellow4 = Yellow4 + tärning();
             break;
         
         default:
@@ -315,40 +320,36 @@ function movePice() {
     
 }
 
-function upDatePos(params) {
-r1Pos(A);
-r2Pos(B);
-r3Pos(C);
-r4Pos(D);
-g1Pos(E);
-g2Pos(F);
-g3Pos(G);
-g4Pos(H);
-b1Pos(I);
-b2Pos(J);
-b3Pos(K);
-b4Pos(L);
-y1Pos(M);
-y2Pos(N);
-y3Pos(O);
-y4Pos(P);
+function upDatePos() {
+r1Pos(Red1);
+r2Pos(Red2);
+r3Pos(Red3);
+r4Pos(Red4);
+g1Pos(Green1);
+g2Pos(Green2);
+g3Pos(Green3);
+g4Pos(Green4);
+b1Pos(Blue1);
+b2Pos(Blue2);
+b3Pos(Blue3);
+b4Pos(Blue4);
+y1Pos(Yellow1);
+y2Pos(Yellow2);
+y3Pos(Yellow3);
+y4Pos(Yellow4);
 }
 
 
-while (A != 45 && B != 45 && C != 45 && D != 45 || E != 45 && F != 45 && G != 45 && H != 45 || I != 45 && J != 45 && K != 45 && L != 45 || M != 45 && N != 45 && O != 45 && P != 45) {
-    tärning();
+while (Red1 != 45 && Red2 != 45 && Red3 != 45 && Red4 != 45 || Green1 != 45 && Green2 != 45 && Green3 != 45 && Green4 != 45 || Blue1 != 45 && Blue2 != 45 && Blue3 != 45 && Blue4 != 45 || Yellow1 != 45 && Yellow2 != 45 && Yellow3 != 45 && Yellow4 != 45) {
     redChoise();
     movePice();
     upDatePos();
-    tärning();
     greenChoise();
     movePice();
     upDatePos();
-    tärning();
     blueChoise();
     movePice();
     upDatePos();
-    tärning();
     yellowChoise();
     movePice();
     upDatePos();
