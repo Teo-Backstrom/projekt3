@@ -1,4 +1,5 @@
 
+  
 
 
 
@@ -19,7 +20,7 @@ let Yellow2 = 0;
 let Yellow3 = 0;
 let Yellow4 = 0;
 
-let val = 0;
+let val = 1;
 let flagga = false;
 
 let currentPlayer = 0;
@@ -30,14 +31,14 @@ let playerPositions = [0,0,0,0];
          return Math.floor(Math.random() * 6) + 1;
         }
 
-        let playerXArray = [
+      /*  let playerXArray = [
             [3,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7],
             [3,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7],
             [4,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7],
             [4,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7],
             
         ]
-
+*/
 
   
 
@@ -75,12 +76,13 @@ let yellow3YPosMoment = [13,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7
 let yellow4XPosMoment = [13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,12,11,10,9];
 let yellow4YPosMoment = [13,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,3,4,5,6,7,7,7,7,7,8,8,8,8,8];
 
-function move(playerClassname, position, xArray, yArray) {
-    document.querySelector("." + playerClassname).style.gridColumn = xArray[position];
-    document.querySelector("." + playerClassname).style.gridRow = yArray[position];
+/*function move(currentPlayer, playerClassname, position, xArray, yArray) {
+    document.querySelector("." + playerClassname[currentPlayer]).style.gridColumn = xArray[position];
+    document.querySelector("." + playerClassname[currentPlayer]).style.gridRow = yArray[position];
 }
+*/
 
-/*function r1Pos(R1) {
+function r1Pos(R1) {
 document.querySelector(".R-player1").style.gridColumn = red1XPosMoment[R1];   
 document.querySelector(".R-player1").style.gridRow = red1YPosMoment[R1];   
 }
@@ -148,7 +150,6 @@ function y4Pos(Y4) {
 document.querySelector(".Y-player4").style.gridColumn = yellow4XPosMoment[Y4];   
 document.querySelector(".Y-player4").style.gridRow = yellow4YPosMoment[Y4];   
 }
-*/
 
 
  /*function dice(){
@@ -156,20 +157,22 @@ document.querySelector(".Y-player4").style.gridRow = yellow4YPosMoment[Y4];
  }
  */
 
-
+function choise(params) {
+    
+}
 function redChoise(){
     flagga = false;
     while (flagga = false) {
-      if (document.querySelector(".red1Button").clicked == true) {
+      if (document.querySelector(".red1Button").onclick == true) {
         val = 1;
         flagga = true;
-       } else if(document.querySelector(".red2Button").clicked == true){
+       } else if(document.querySelector(".red2Button").onclick == true){
            val = 2;
            flagga = true;
-       } else if(document.querySelector(".red3Button").clicked == true){
+       } else if(document.querySelector(".red3Button").onclick == true){
            val = 3;
            flagga = true;
-       } else if(document.querySelector(".red4Button").clicked == true){
+       } else if(document.querySelector(".red4Button").onclick == true){
            val = 4;
            flagga = true;
        } else{
@@ -247,71 +250,71 @@ function yellowChoise() {
     
 }
 
-function movePice() {
+function movePice(steg) {
 
     switch (val) {
         case 1:
-            Red1 = Red1 + tärning();
+            Red1 = Red1 + steg;
             break;
 
         case 2:
-            Red2 = Red2 + tärning();
+            Red2 = Red2 + steg;
             break;
 
         case 3:
-            Red3 = Red3 + tärning();
+            Red3 = Red3 + steg;
             break;
 
         case 4:
-            Red4 = Red4 + tärning();
+            Red4 = Red4 + steg;
             break;
         
         case 5:
-            Green1 = Green1 + tärning();
+            Green1 = Green1 + steg;
             break;
 
         case 6:
-            Green2 = Green2 + tärning();
+            Green2 = Green2 + steg;
             break;
 
         case 7:
-            Green3 = Green3 + tärning();
+            Green3 = Green3 + steg;
             break;
 
         case 8:
-            Green4 = Green4 + tärning();
+            Green4 = Green4 + steg;
             break;
 
         case 9:
-            Blue1 = Blue1 + tärning();
+            Blue1 = Blue1 + steg;
             break;
 
         case 10:
-            Blue2 = Blue2 + tärning();
+            Blue2 = Blue2 + steg;
             break;
 
         case 11:
-            Blue3 = Blue3 + tärning();
+            Blue3 = Blue3 + steg;
             break;
         
         case 12:
-            Blue4 = Blue4 + tärning();
+            Blue4 = Blue4 + steg;
             break;
 
         case 13:
-            Yellow1 = Yellow1 + tärning();
+            Yellow1 = Yellow1 + steg;
             break;
 
         case 14:
-            Yellow2 = Yellow2 + tärning();
+            Yellow2 = Yellow2 + steg;
             break;
 
         case 15:
-            Yellow3 = Yellow3 + tärning();
+            Yellow3 = Yellow3 + steg;
             break;
         
         case 16:
-            Yellow4 = Yellow4 + tärning();
+            Yellow4 = Yellow4 + steg;
             break;
         
         default:
@@ -340,9 +343,11 @@ y4Pos(Yellow4);
 }
 
 
-while (Red1 != 45 && Red2 != 45 && Red3 != 45 && Red4 != 45 || Green1 != 45 && Green2 != 45 && Green3 != 45 && Green4 != 45 || Blue1 != 45 && Blue2 != 45 && Blue3 != 45 && Blue4 != 45 || Yellow1 != 45 && Yellow2 != 45 && Yellow3 != 45 && Yellow4 != 45) {
+//while (Red1 != 45 && Red2 != 45 && Red3 != 45 && Red4 != 45 || Green1 != 45 && Green2 != 45 && Green3 != 45 && Green4 != 45 || Blue1 != 45 && Blue2 != 45 && Blue3 != 45 && Blue4 != 45 || Yellow1 != 45 && Yellow2 != 45 && Yellow3 != 45 && Yellow4 != 45) {
     redChoise();
-    movePice();
+    console.log(val);
+    /*movePice();
+    console.log(tärning());
     upDatePos();
     greenChoise();
     movePice();
@@ -353,5 +358,36 @@ while (Red1 != 45 && Red2 != 45 && Red3 != 45 && Red4 != 45 || Green1 != 45 && G
     yellowChoise();
     movePice();
     upDatePos();
-}
+//}
+*/
+
+let result = 0;
+let randomNumber = 0;
+let dice = {
+    sides: 6,
+    roll: function () {
+      return Math.floor(Math.random() * this.sides) + 1;
+    }
+  }
+  
+  
+  
+  //Prints dice roll to the page
+  
+  function printNumber(number) {
+    let placeholder = document.querySelector('.placeholder');
+    placeholder.innerHTML = number;
+  }
+  
+  let button = document.querySelector('.button');
+  
+  button.onclick = function() {
+    result = dice.roll();
+    printNumber(result);
+    redChoise();
+    movePice(result);
+    upDatePos();
+
+   
+  }
 
