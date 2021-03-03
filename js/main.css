@@ -79,9 +79,6 @@ body {
 
 .green-player {
   background-color: rgb(0, 80, 0);
-  border-radius: 100%;
-  height: 100%;
-  width: 100%;
 }
 
 .G-player1 {
@@ -143,9 +140,6 @@ body {
 
 .red-player {
   background-color: rgb(180, 0, 0);
-  border-radius: 100%;
-  height: 100%;
-  width: 100%;
 }
 
 .R-player1 {
@@ -208,9 +202,6 @@ body {
 
 .blue-player {
   background-color: rgb(0, 0, 175);
-  border-radius: 100%;
-  height: 100%;
-  width: 100%;
 }
 
 .B-player1 {
@@ -272,6 +263,15 @@ body {
 
 .yellow-player {
   background-color: rgb(160, 160, 0);
+}
+
+.yellow-player,
+.red-player,
+.blue-player,
+.green-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 100%;
   height: 100%;
   width: 100%;
@@ -299,5 +299,65 @@ body {
 
 button {
   display: flex;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.green-button button {
+  background-color: #4caf50;
+}
+.red-button button {
+  background-color: #af4c4c;
+}
+.blue-button button {
+  background-color: #4c4eaf;
+}
+.yellow-button button {
+  background-color: #adaf4c;
+}
+
+.invisible {
+  display: none;
+}
+
+.alternativ {
+  display: flex;
+  justify-content: center;
+}
+
+.placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
+  border: solid black;
+  font-size: 2em;
+  width: 3em;
+  height: 3em;
+  margin-bottom: 0.5em;
+}
+.dice {
+  display: flex;
+  margin: auto;
+  margin-bottom: 1em;
+  background-image: linear-gradient(red, green, blue, yellow);
+}
+
+.green-button,
+.red-button,
+.blue-button,
+.yellow-button {
+  display: flex;
+  flex-direction: column;
 }

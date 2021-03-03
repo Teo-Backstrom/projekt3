@@ -20,6 +20,7 @@ let Yellow2 = 0;
 let Yellow3 = 0;
 let Yellow4 = 0;
 
+
 let flagga = false;
 
 
@@ -621,89 +622,167 @@ function ettAnnat(){
     }    
 }
 
+function checkWinRed() {
+    if (Red1 >= 46 && Red2 >= 46 && Red3 >= 46 && Red4 >= 46) {
+        console.log("redPlayerWin");
+        document.querySelector('.winner').innerHTML = "Röda laget vann";
+        document.querySelector(".spel-plan").classList.toggle("invisible");
+        document.querySelector(".result").classList.toggle("invisible");
+    }
+}
+
+function checkWinGreen() {
+    if (Green1 >= 46 && Green2 >= 46 && Green3 >= 46 && Green4 >= 46) {
+        console.log("greenPlayerWin");
+        document.querySelector('.winner').innerHTML = "Gröna laget vann";
+        document.querySelector(".spel-plan").classList.toggle("invisible");
+        document.querySelector(".result").classList.toggle("invisible");
+    }
+}
+
+function checkWinBlue() {
+    if (Blue1 >= 46 && Blue2 >= 46 && Blue3 >= 46 && Blue4 >= 46) {
+        console.log("BluePlayerWin");
+        document.querySelector('.winner').innerHTML = "Blåa laget vann";
+        document.querySelector(".spel-plan").classList.toggle("invisible");
+        document.querySelector(".result").classList.toggle("invisible");
+    }
+}
+
+function checkWinYellow() {
+    if (Yellow1 >= 46 && Yellow2 >= 46 && Yellow3 >= 46 && Yellow4 >= 46) {
+        console.log("YellowPlayerWin");
+        document.querySelector('.winner').innerHTML = "Gula laget vann";
+        document.querySelector(".spel-plan").classList.toggle("invisible");
+        document.querySelector(".result").classList.toggle("invisible");
+    }
+}
+
+function resetGame() {
+    document.querySelector('.resetButton').addEventListener("click", function() {
+        Red1 = 0;
+        Red2 = 0;
+        Red3 = 0;
+        Red4 = 0;
+        Green1 = 0;
+        Green2 = 0;
+        Green3 = 0;
+        Green4 = 0;
+        Blue1 = 0;
+        Blue2 = 0;
+        Blue3 = 0;
+        Blue4 = 0;
+        Yellow1 = 0;
+        Yellow2 = 0;
+        Yellow3 = 0;
+        Yellow4 = 0;
+        result = 0;
+        printNumber(result);
+        document.querySelector(".spel-plan").classList.toggle("invisible");
+        document.querySelector(".result").classList.toggle("invisible");
+        upDatePos();
+});
+}
+
 function somSomEttAnnat() {
             
             document.querySelector('.red1Button').addEventListener("click", function() {
                 val = 1;
                 movePice(result);
                 upDatePos();
+                checkWinRed();
                } );
                document.querySelector('.red2Button').addEventListener("click", function() {
                 val = 2;
                 movePice(result);
                 upDatePos();
+                checkWinRed();
                } );
                document.querySelector('.red3Button').addEventListener("click", function() {
                 val = 3;
                 movePice(result);
                 upDatePos();
+                checkWinRed();
                } );
                document.querySelector('.red4Button').addEventListener("click", function() {
                 val = 4;
                 movePice(result);
                 upDatePos();
+                checkWinRed();
                } );
                 document.querySelector('.green1Button').addEventListener("click", function() {
                     val = 5;
                     movePice(result);
                     upDatePos();
+                    checkWinGreen();
                    } );
                    document.querySelector('.green2Button').addEventListener("click", function() {
                     val = 6;
                     movePice(result);
                     upDatePos();
+                    checkWinGreen();
                    } );
                    document.querySelector('.green3Button').addEventListener("click", function() {
                     val = 7;
                     movePice(result);
                     upDatePos();
+                    checkWinGreen();
                    } );
                    document.querySelector('.green4Button').addEventListener("click", function() {
                     val = 8;
                     movePice(result);
                     upDatePos();
+                    checkWinGreen();
                    } );
 
                 document.querySelector('.blue1Button').addEventListener("click", function() {
                     val = 9;
                     movePice(result);
                     upDatePos();
+                    checkWinBlue();
                    } );
                    document.querySelector('.blue2Button').addEventListener("click", function() {
                     val = 10;
                     movePice(result);
                     upDatePos();
+                    checkWinBlue();
                    } );
                    document.querySelector('.blue3Button').addEventListener("click", function() {
                     val = 11;
                     movePice(result);
                     upDatePos();
+                    checkWinBlue();
                    } );
                    document.querySelector('.blue4Button').addEventListener("click", function() {
                     val = 12;
                     movePice(result);
                     upDatePos();
+                    checkWinBlue();
                    } );
 
                 document.querySelector('.yellow1Button').addEventListener("click", function() {
                     val = 13;
                     movePice(result);
                     upDatePos();
+                    checkWinYellow();
                    } );
                    document.querySelector('.yellow2Button').addEventListener("click", function() {
                     val = 14;
                     movePice(result);
                     upDatePos();
+                    checkWinYellow();
                    } );
                    document.querySelector('.yellow3Button').addEventListener("click", function() {
                     val = 15;
                     movePice(result);
                     upDatePos();
+                    checkWinYellow();
                    } );
                    document.querySelector('.yellow4Button').addEventListener("click", function() {
                     val = 16;
                     movePice(result);
                     upDatePos();
+                    checkWinYellow();
                    } );
 
 }
@@ -724,15 +803,12 @@ let dice = {
   }
   
   let result = 0;
-  document.querySelector('.button').onclick = function() {
+  document.querySelector('.dice').onclick = function() {
     result = dice.roll();
     printNumber(result);
     console.log(currentPlayer);
     
   }
 somSomEttAnnat();
+resetGame();
   
-  
-  
-  
-
