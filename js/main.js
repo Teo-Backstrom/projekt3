@@ -20,16 +20,13 @@ let Yellow2 = 0;
 let Yellow3 = 0;
 let Yellow4 = 0;
 
-let val = 1;
 let flagga = false;
 
-let currentPlayer = 0;
+
 let playerClassname = ["redPlayer","greenPlayer","bluePlayer","yellowPlayer"]
 let playerPositions = [0,0,0,0];
 
- function tärning () {
-         return Math.floor(Math.random() * 6) + 1;
-        }
+
 
       /*  let playerXArray = [
             [3,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7],
@@ -126,8 +123,8 @@ document.querySelector(".B-player2").style.gridColumn = blue2XPosMoment[B2];
 document.querySelector(".B-player2").style.gridRow = blue2YPosMoment[B2];   
 }
 function b3Pos(B3) {
-document.querySelector(".B-player2").style.gridColumn = blue3XPosMoment[B3];   
-document.querySelector(".B-player2").style.gridRow = blue3YPosMoment[B3];   
+document.querySelector(".B-player3").style.gridColumn = blue3XPosMoment[B3];   
+document.querySelector(".B-player3").style.gridRow = blue3YPosMoment[B3];   
 }
 function b4Pos(B4) {
 document.querySelector(".B-player4").style.gridColumn = blue4XPosMoment[B4];   
@@ -342,35 +339,382 @@ y3Pos(Yellow3);
 y4Pos(Yellow4);
 }
 
+function somEttAnnat() {
+    if (currentPlayer == 0) {
+        document.querySelector('.red1Button').addEventListener("click", function() {
+            val = 1;
+            movePice(result);
+            upDatePos();
+                currentPlayer++;
+                console.log(currentPlayer);
+           } );
+           document.querySelector('.red2Button').addEventListener("click", function() {
+            val = 2;
+            movePice(result);
+            upDatePos();
+                currentPlayer++;
+                console.log(currentPlayer);
+           } );
+           document.querySelector('.red3Button').addEventListener("click", function() {
+            val = 3;
+            movePice(result);
+            upDatePos();
+                currentPlayer++;
+                console.log(currentPlayer);
+           } );
+           document.querySelector('.red4Button').addEventListener("click", function() {
+            val = 4;
+            movePice(result);
+            upDatePos();
+                currentPlayer++;
+                console.log(currentPlayer);
+           } );
+    } else if(currentPlayer == 1){
+        document.querySelector('.green1Button').addEventListener("click", function() {
+            val = 5;
+            movePice(result);
+            upDatePos();
+                currentPlayer++;
+                console.log(currentPlayer);
+           } );
+           document.querySelector('.green2Button').addEventListener("click", function() {
+            val = 6;
+            movePice(result);
+            upDatePos();
+                currentPlayer++;
+                console.log(currentPlayer);
+           } );
+           document.querySelector('.green3Button').addEventListener("click", function() {
+            val = 7;
+            movePice(result);
+            upDatePos();
+                currentPlayer++;
+                console.log(currentPlayer);
+           } );
+           document.querySelector('.green4Button').addEventListener("click", function() {
+            val = 8;
+            movePice(result);
+            upDatePos();
+                currentPlayer++;
+                console.log(currentPlayer);
+           } );
+    } else if(currentPlayer == 2){
+        document.querySelector('.blue1Button').addEventListener("click", function() {
+            val = 9;
+            movePice(result);
+            upDatePos();
+                currentPlayer++;
+                console.log(currentPlayer);
+           } );
+           document.querySelector('.blue2Button').addEventListener("click", function() {
+            val = 10;
+            movePice(result);
+            upDatePos();
+                currentPlayer++;
+                console.log(currentPlayer);
+           } );
+           document.querySelector('.blue3Button').addEventListener("click", function() {
+            val = 11;
+            movePice(result);
+            upDatePos();
+                currentPlayer++;
+                console.log(currentPlayer);
+           } );
+           document.querySelector('.blue4Button').addEventListener("click", function() {
+            val = 12;
+            movePice(result);
+            upDatePos();
+                currentPlayer++;
+                console.log(currentPlayer);
+           } );
+    } else {
+        document.querySelector('.yellow1Button').addEventListener("click", function() {
+            val = 13;
+            movePice(result);
+            upDatePos();
+                currentPlayer = 0;
+                console.log(currentPlayer);
+           } );
+           document.querySelector('.yellow1Button').addEventListener("click", function() {
+            val = 13;
+            movePice(result);
+            upDatePos();
+                currentPlayer = 0;
+                console.log(currentPlayer);
+           } );
+           document.querySelector('.yellow1Button').addEventListener("click", function() {
+            val = 13;
+            movePice(result);
+            upDatePos();
+                currentPlayer = 0;
+                console.log(currentPlayer);
+           } );
+           document.querySelector('.yellow1Button').addEventListener("click", function() {
+            val = 13;
+            movePice(result);
+            upDatePos();
+                currentPlayer = 0;
+                console.log(currentPlayer);
+           } );
+    }
+    
+}
 
-//while (Red1 != 45 && Red2 != 45 && Red3 != 45 && Red4 != 45 || Green1 != 45 && Green2 != 45 && Green3 != 45 && Green4 != 45 || Blue1 != 45 && Blue2 != 45 && Blue3 != 45 && Blue4 != 45 || Yellow1 != 45 && Yellow2 != 45 && Yellow3 != 45 && Yellow4 != 45) {
-    redChoise();
-    console.log(val);
-    /*movePice();
-    console.log(tärning());
-    upDatePos();
-    greenChoise();
-    movePice();
-    upDatePos();
-    blueChoise();
-    movePice();
-    upDatePos();
-    yellowChoise();
-    movePice();
-    upDatePos();
-//}
-*/
+let currentPlayer = 0;
+function ettAnnat(){
+    switch (currentPlayer) {
+        case 0:
+            
+            document.querySelector('.red1Button').addEventListener("click", function() {
+                val = 1;
+                movePice(result);
+                upDatePos();
+                    currentPlayer++;
+                    console.log(currentPlayer);
+               } );
+               document.querySelector('.red2Button').addEventListener("click", function() {
+                val = 2;
+                movePice(result);
+                upDatePos();
+                    currentPlayer++;
+                    console.log(currentPlayer);
+               } );
+               document.querySelector('.red3Button').addEventListener("click", function() {
+                val = 3;
+                movePice(result);
+                upDatePos();
+                    currentPlayer++;
+                    console.log(currentPlayer);
+               } );
+               document.querySelector('.red4Button').addEventListener("click", function() {
+                val = 4;
+                movePice(result);
+                upDatePos();
+                    currentPlayer++;
+                    console.log(currentPlayer);
+               } );
 
-let result = 0;
-let randomNumber = 0;
+               document.querySelector('.green1Button').addEventListener("click", function() {
+                val = 5;
+                movePice(result);
+                upDatePos();
+                    currentPlayer++;
+                    console.log(currentPlayer);
+               } );
+               document.querySelector('.green2Button').addEventListener("click", function() {
+                val = 6;
+                movePice(result);
+                upDatePos();
+                    currentPlayer++;
+                    console.log(currentPlayer);
+               } );
+               document.querySelector('.green3Button').addEventListener("click", function() {
+                val = 7;
+                movePice(result);
+                upDatePos();
+                    currentPlayer++;
+                    console.log(currentPlayer);
+               } );
+               document.querySelector('.green4Button').addEventListener("click", function() {
+                val = 8;
+                movePice(result);
+                upDatePos();
+                    currentPlayer++;
+                    console.log(currentPlayer);
+               } );
+            break;
+            case 1:
+                document.querySelector('.green1Button').addEventListener("click", function() {
+                    val = 5;
+                    movePice(result);
+                    upDatePos();
+                        currentPlayer++;
+                        console.log(currentPlayer);
+                   } );
+                   document.querySelector('.green2Button').addEventListener("click", function() {
+                    val = 6;
+                    movePice(result);
+                    upDatePos();
+                        currentPlayer++;
+                        console.log(currentPlayer);
+                   } );
+                   document.querySelector('.green3Button').addEventListener("click", function() {
+                    val = 7;
+                    movePice(result);
+                    upDatePos();
+                        currentPlayer++;
+                        console.log(currentPlayer);
+                   } );
+                   document.querySelector('.green4Button').addEventListener("click", function() {
+                    val = 8;
+                    movePice(result);
+                    upDatePos();
+                        currentPlayer++;
+                        console.log(currentPlayer);
+                   } );
+
+                break;
+            case 2:
+                document.querySelector('.blue1Button').addEventListener("click", function() {
+                    val = 9;
+                    movePice(result);
+                    upDatePos();
+                        currentPlayer++;
+                        console.log(currentPlayer);
+                   } );
+                   document.querySelector('.blue2Button').addEventListener("click", function() {
+                    val = 10;
+                    movePice(result);
+                    upDatePos();
+                        currentPlayer++;
+                        console.log(currentPlayer);
+                   } );
+                   document.querySelector('.blue3Button').addEventListener("click", function() {
+                    val = 11;
+                    movePice(result);
+                    upDatePos();
+                        currentPlayer++;
+                        console.log(currentPlayer);
+                   } );
+                   document.querySelector('.blue4Button').addEventListener("click", function() {
+                    val = 12;
+                    movePice(result);
+                    upDatePos();
+                        currentPlayer++;
+                        console.log(currentPlayer);
+                   } );
+
+                break;
+            case 3:
+                document.querySelector('.yellow1Button').addEventListener("click", function() {
+                    val = 13;
+                    movePice(result);
+                    upDatePos();
+                        currentPlayer = 0;
+                        console.log(currentPlayer);
+                   } );
+                   document.querySelector('.yellow1Button').addEventListener("click", function() {
+                    val = 13;
+                    movePice(result);
+                    upDatePos();
+                        currentPlayer = 0;
+                        console.log(currentPlayer);
+                   } );
+                   document.querySelector('.yellow1Button').addEventListener("click", function() {
+                    val = 13;
+                    movePice(result);
+                    upDatePos();
+                        currentPlayer = 0;
+                        console.log(currentPlayer);
+                   } );
+                   document.querySelector('.yellow1Button').addEventListener("click", function() {
+                    val = 13;
+                    movePice(result);
+                    upDatePos();
+                        currentPlayer = 0;
+                        console.log(currentPlayer);
+                   } );
+
+                break;
+        default:
+            break;
+    }    
+}
+
+function somSomEttAnnat() {
+            
+            document.querySelector('.red1Button').addEventListener("click", function() {
+                val = 1;
+                movePice(result);
+                upDatePos();
+               } );
+               document.querySelector('.red2Button').addEventListener("click", function() {
+                val = 2;
+                movePice(result);
+                upDatePos();
+               } );
+               document.querySelector('.red3Button').addEventListener("click", function() {
+                val = 3;
+                movePice(result);
+                upDatePos();
+               } );
+               document.querySelector('.red4Button').addEventListener("click", function() {
+                val = 4;
+                movePice(result);
+                upDatePos();
+               } );
+                document.querySelector('.green1Button').addEventListener("click", function() {
+                    val = 5;
+                    movePice(result);
+                    upDatePos();
+                   } );
+                   document.querySelector('.green2Button').addEventListener("click", function() {
+                    val = 6;
+                    movePice(result);
+                    upDatePos();
+                   } );
+                   document.querySelector('.green3Button').addEventListener("click", function() {
+                    val = 7;
+                    movePice(result);
+                    upDatePos();
+                   } );
+                   document.querySelector('.green4Button').addEventListener("click", function() {
+                    val = 8;
+                    movePice(result);
+                    upDatePos();
+                   } );
+
+                document.querySelector('.blue1Button').addEventListener("click", function() {
+                    val = 9;
+                    movePice(result);
+                    upDatePos();
+                   } );
+                   document.querySelector('.blue2Button').addEventListener("click", function() {
+                    val = 10;
+                    movePice(result);
+                    upDatePos();
+                   } );
+                   document.querySelector('.blue3Button').addEventListener("click", function() {
+                    val = 11;
+                    movePice(result);
+                    upDatePos();
+                   } );
+                   document.querySelector('.blue4Button').addEventListener("click", function() {
+                    val = 12;
+                    movePice(result);
+                    upDatePos();
+                   } );
+
+                document.querySelector('.yellow1Button').addEventListener("click", function() {
+                    val = 13;
+                    movePice(result);
+                    upDatePos();
+                   } );
+                   document.querySelector('.yellow2Button').addEventListener("click", function() {
+                    val = 14;
+                    movePice(result);
+                    upDatePos();
+                   } );
+                   document.querySelector('.yellow3Button').addEventListener("click", function() {
+                    val = 15;
+                    movePice(result);
+                    upDatePos();
+                   } );
+                   document.querySelector('.yellow4Button').addEventListener("click", function() {
+                    val = 16;
+                    movePice(result);
+                    upDatePos();
+                   } );
+
+}
+
+
 let dice = {
     sides: 6,
     roll: function () {
       return Math.floor(Math.random() * this.sides) + 1;
     }
   }
-  
-  
   
   //Prints dice roll to the page
   
@@ -379,15 +723,16 @@ let dice = {
     placeholder.innerHTML = number;
   }
   
-  let button = document.querySelector('.button');
-  
-  button.onclick = function() {
+  let result = 0;
+  document.querySelector('.button').onclick = function() {
     result = dice.roll();
     printNumber(result);
-    redChoise();
-    movePice(result);
-    upDatePos();
-
-   
+    console.log(currentPlayer);
+    
   }
+somSomEttAnnat();
+  
+  
+  
+  
 
