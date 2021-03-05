@@ -302,6 +302,7 @@ function resetGame() {
 });
 }
 
+//Väljer vilken spelare som ska röra sig genom ett tryck på en knapp och updatera positon och kolla om alla i laget gått i mål eller om bara den gått i mål
 function playerChoise() {
             
             document.querySelector('.red1Button').addEventListener("click", function() {
