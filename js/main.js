@@ -1,8 +1,3 @@
-
-  
-
-
-
 let Red1 = 0;
 let Red2 = 0;
 let Red3 = 0;
@@ -19,28 +14,9 @@ let Yellow1 = 0;
 let Yellow2 = 0;
 let Yellow3 = 0;
 let Yellow4 = 0;
-
-
-let flagga = false;
-
-
-let playerClassname = ["redPlayer","greenPlayer","bluePlayer","yellowPlayer"]
-let playerPositions = [0,0,0,0];
-
-
-
-      /*  let playerXArray = [
-            [3,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7],
-            [3,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7],
-            [4,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7],
-            [4,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7],
-            
-        ]
-*/
-
   
 
-
+//För bestämda vägar för x och Y led i arrayer
 let green1XPosMoment = [12,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,3,4,5,6,7,7,7,7,7,8,8,8,8,8];
 let green1YPosMoment = [3,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,4,5,6,7];
 let green2XPosMoment = [13,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,3,4,5,6,7,7,7,7,7,8,8,8,8,8];
@@ -80,6 +56,7 @@ let yellow4YPosMoment = [13,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7
 }
 */
 
+//För att kunna koppla samman arrayen och flytta spelarna i gridden
 function r1Pos(R1) {
 document.querySelector(".R-player1").style.gridColumn = red1XPosMoment[R1];   
 document.querySelector(".R-player1").style.gridRow = red1YPosMoment[R1];   
@@ -150,14 +127,7 @@ document.querySelector(".Y-player4").style.gridRow = yellow4YPosMoment[Y4];
 }
 
 
- /*function dice(){
-    console.log(Math.floor(Math.random() * 10));
- }
- */
-
-function choise(params) {
-    
-}
+ 
 function redChoise(){
     flagga = false;
     while (flagga = false) {
@@ -247,7 +217,7 @@ function yellowChoise() {
     }
     
 }
-
+//För att lägga till värdet på tärningen till hur många fler steg spelaren ska ta
 function movePice(steg) {
 
     switch (val) {
@@ -321,6 +291,7 @@ function movePice(steg) {
     
 }
 
+//uppdatera grafiskt spelarens position
 function upDatePos() {
 r1Pos(Red1);
 r2Pos(Red2);
@@ -622,8 +593,9 @@ function ettAnnat(){
     }    
 }
 
+//ha koll ifall alla i laget gått i mål
 function checkWinRed() {
-    if (Red1 >= 46 && Red2 >= 46 && Red3 >= 46 && Red4 >= 46) {
+    if (Red1 >= 45 && Red2 >= 45 && Red3 >= 45 && Red4 >= 45) {
         console.log("redPlayerWin");
         document.querySelector('.winner').innerHTML = "Röda laget vann";
         document.querySelector(".spel-plan").classList.toggle("invisible");
@@ -632,7 +604,7 @@ function checkWinRed() {
 }
 
 function checkWinGreen() {
-    if (Green1 >= 46 && Green2 >= 46 && Green3 >= 46 && Green4 >= 46) {
+    if (Green1 >= 45 && Green2 >= 45 && Green3 >= 45 && Green4 >= 45) {
         console.log("greenPlayerWin");
         document.querySelector('.winner').innerHTML = "Gröna laget vann";
         document.querySelector(".spel-plan").classList.toggle("invisible");
@@ -641,7 +613,7 @@ function checkWinGreen() {
 }
 
 function checkWinBlue() {
-    if (Blue1 >= 46 && Blue2 >= 46 && Blue3 >= 46 && Blue4 >= 46) {
+    if (Blue1 >= 45 && Blue2 >= 45 && Blue3 >= 45 && Blue4 >= 45) {
         console.log("BluePlayerWin");
         document.querySelector('.winner').innerHTML = "Blåa laget vann";
         document.querySelector(".spel-plan").classList.toggle("invisible");
@@ -650,7 +622,7 @@ function checkWinBlue() {
 }
 
 function checkWinYellow() {
-    if (Yellow1 >= 46 && Yellow2 >= 46 && Yellow3 >= 46 && Yellow4 >= 46) {
+    if (Yellow1 >= 45 && Yellow2 >= 45 && Yellow3 >= 45 && Yellow4 >= 45) {
         console.log("YellowPlayerWin");
         document.querySelector('.winner').innerHTML = "Gula laget vann";
         document.querySelector(".spel-plan").classList.toggle("invisible");
@@ -658,6 +630,27 @@ function checkWinYellow() {
     }
 }
 
+//för att göra spelarna synliga igen när man restartar
+function makePlayerVisable() {
+        document.querySelector(".R-player1").style.display = "flex";
+        document.querySelector(".R-player2").style.display = "flex";
+        document.querySelector(".R-player3").style.display = "flex";
+        document.querySelector(".R-player4").style.display = "flex";
+        document.querySelector(".B-player1").style.display = "flex";
+        document.querySelector(".B-player2").style.display = "flex";
+        document.querySelector(".B-player3").style.display = "flex";
+        document.querySelector(".B-player4").style.display = "flex";
+        document.querySelector(".G-player1").style.display = "flex";
+        document.querySelector(".G-player2").style.display = "flex";
+        document.querySelector(".G-player3").style.display = "flex";
+        document.querySelector(".G-player4").style.display = "flex";
+        document.querySelector(".Y-player1").style.display = "flex";
+        document.querySelector(".Y-player2").style.display = "flex";
+        document.querySelector(".Y-player3").style.display = "flex";
+        document.querySelector(".Y-player4").style.display = "flex";
+}
+
+//restarta gamet till startvärderna 
 function resetGame() {
     document.querySelector('.resetButton').addEventListener("click", function() {
         Red1 = 0;
@@ -680,6 +673,7 @@ function resetGame() {
         printNumber(result);
         document.querySelector(".spel-plan").classList.toggle("invisible");
         document.querySelector(".result").classList.toggle("invisible");
+        makePlayerVisable();
         upDatePos();
 });
 }
@@ -691,48 +685,72 @@ function somSomEttAnnat() {
                 movePice(result);
                 upDatePos();
                 checkWinRed();
+                if (Red1 > 44) {
+                    document.querySelector(".R-player1").style.display = "none";
+                }
                } );
                document.querySelector('.red2Button').addEventListener("click", function() {
                 val = 2;
                 movePice(result);
                 upDatePos();
                 checkWinRed();
+                if (Red2 > 44) {
+                    document.querySelector(".R-player2").style.display = "none";   
+                }
                } );
                document.querySelector('.red3Button').addEventListener("click", function() {
                 val = 3;
                 movePice(result);
                 upDatePos();
                 checkWinRed();
+                if (Red3 > 44) {
+                    document.querySelector(".R-player3").style.display = "none";   
+                }
                } );
                document.querySelector('.red4Button').addEventListener("click", function() {
                 val = 4;
                 movePice(result);
                 upDatePos();
                 checkWinRed();
+                if (Red4 > 44) {
+                    document.querySelector(".R-player4").style.display = "none";   
+                }
                } );
                 document.querySelector('.green1Button').addEventListener("click", function() {
                     val = 5;
                     movePice(result);
                     upDatePos();
                     checkWinGreen();
+                    if (Green1 > 44) {
+                        document.querySelector(".G-player1").style.display = "none";   
+                    }
                    } );
                    document.querySelector('.green2Button').addEventListener("click", function() {
                     val = 6;
                     movePice(result);
                     upDatePos();
                     checkWinGreen();
+                    if (Green2 > 44) {
+                        document.querySelector(".G-player2").style.display = "none";   
+                    }
                    } );
                    document.querySelector('.green3Button').addEventListener("click", function() {
                     val = 7;
                     movePice(result);
                     upDatePos();
                     checkWinGreen();
+                    if (Green3 > 44) {
+                        document.querySelector(".G-player3").style.display = "none";   
+                    }
                    } );
                    document.querySelector('.green4Button').addEventListener("click", function() {
                     val = 8;
                     movePice(result);
                     upDatePos();
                     checkWinGreen();
+                    if (Green4 > 44) {
+                        document.querySelector(".G-player4").style.display = "none";   
+                    }
                    } );
 
                 document.querySelector('.blue1Button').addEventListener("click", function() {
@@ -740,24 +758,36 @@ function somSomEttAnnat() {
                     movePice(result);
                     upDatePos();
                     checkWinBlue();
+                    if (Blue1 > 44) {
+                        document.querySelector(".B-player1").style.display = "none";   
+                    }
                    } );
                    document.querySelector('.blue2Button').addEventListener("click", function() {
                     val = 10;
                     movePice(result);
                     upDatePos();
                     checkWinBlue();
+                    if (Blue2 > 44) {
+                        document.querySelector(".B-player2").style.display = "none";   
+                    }
                    } );
                    document.querySelector('.blue3Button').addEventListener("click", function() {
                     val = 11;
                     movePice(result);
                     upDatePos();
                     checkWinBlue();
+                    if (Blue3 > 44) {
+                        document.querySelector(".B-player3").style.display = "none";   
+                    }
                    } );
                    document.querySelector('.blue4Button').addEventListener("click", function() {
                     val = 12;
                     movePice(result);
                     upDatePos();
                     checkWinBlue();
+                    if (Blue4 > 44) {
+                        document.querySelector(".B-player4").style.display = "none";  
+                    }
                    } );
 
                 document.querySelector('.yellow1Button').addEventListener("click", function() {
@@ -765,24 +795,36 @@ function somSomEttAnnat() {
                     movePice(result);
                     upDatePos();
                     checkWinYellow();
+                    if (Yellow1 > 44) {
+                        document.querySelector(".Y-player1").style.display = "none";   
+                    }
                    } );
                    document.querySelector('.yellow2Button').addEventListener("click", function() {
                     val = 14;
                     movePice(result);
                     upDatePos();
                     checkWinYellow();
+                    if (Yellow2 > 44) {
+                        document.querySelector(".Y-player2").style.display = "none";   
+                    }
                    } );
                    document.querySelector('.yellow3Button').addEventListener("click", function() {
                     val = 15;
                     movePice(result);
                     upDatePos();
                     checkWinYellow();
+                    if (Yellow3 > 44) {
+                        document.querySelector(".Y-player3").style.display = "none";   
+                    }
                    } );
                    document.querySelector('.yellow4Button').addEventListener("click", function() {
                     val = 16;
                     movePice(result);
                     upDatePos();
                     checkWinYellow();
+                    if (Yellow4 > 44) {
+                        document.querySelector(".Y-player4").style.display = "none";   
+                    }
                    } );
 
 }
