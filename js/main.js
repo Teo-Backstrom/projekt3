@@ -829,7 +829,7 @@ function somSomEttAnnat() {
 
 }
 
-
+//tärning som sen visar vad den fick för värde
 let dice = {
     sides: 6,
     roll: function () {
