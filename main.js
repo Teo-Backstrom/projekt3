@@ -302,7 +302,7 @@ function resetGame() {
 });
 }
 
-function somSomEttAnnat() {
+function playerChoise() {
             
             document.querySelector('.red1Button').addEventListener("click", function() {
                 val = 1;
@@ -470,5 +470,5 @@ function roll() {
     
   }
   //kör funktionerna för att spelet ska funka
-somSomEttAnnat();
+playerChoise();
 resetGame();
