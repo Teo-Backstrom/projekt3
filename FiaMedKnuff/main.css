@@ -23,8 +23,8 @@ h1 {
 }
 
 .info p {
-  width: 30em;
-  height: 10em;
+  width: 30vw;
+  height: 12em;
   margin: 1em;
   padding: 1em;
   border: black solid 0.15em;

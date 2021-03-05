@@ -50,11 +50,6 @@ let yellow3YPosMoment = [13,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7
 let yellow4XPosMoment = [13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,3,4,5,6,7,7,7,7,7,8,9,9,9,9,9,10,11,12,13,13,12,11,10,9];
 let yellow4YPosMoment = [13,9,9,9,9,9,10,11,12,13,13,13,12,11,10,9,9,9,9,9,8,7,7,7,7,7,6,5,4,3,3,3,4,5,6,7,7,7,7,7,8,8,8,8,8];
 
-/*function move(currentPlayer, playerClassname, position, xArray, yArray) {
-    document.querySelector("." + playerClassname[currentPlayer]).style.gridColumn = xArray[position];
-    document.querySelector("." + playerClassname[currentPlayer]).style.gridRow = yArray[position];
-}
-*/
 
 //För att kunna koppla samman arrayen och flytta spelarna i gridden
 function r1Pos(R1) {
@@ -127,96 +122,7 @@ document.querySelector(".Y-player4").style.gridRow = yellow4YPosMoment[Y4];
 }
 
 
- 
-function redChoise(){
-    flagga = false;
-    while (flagga = false) {
-      if (document.querySelector(".red1Button").onclick == true) {
-        val = 1;
-        flagga = true;
-       } else if(document.querySelector(".red2Button").onclick == true){
-           val = 2;
-           flagga = true;
-       } else if(document.querySelector(".red3Button").onclick == true){
-           val = 3;
-           flagga = true;
-       } else if(document.querySelector(".red4Button").onclick == true){
-           val = 4;
-           flagga = true;
-       } else{
-           console.WriteLine("något gick fel röd");
-       }
-    }
-    
-}
 
-function greenChoise() {
-    flagga = false;
-    while (flagga = false) {
-        if(document.querySelector(".green1Button").clicked == true){
-            val = 5;
-            flagga = true;
-        } else if(document.querySelector(".green2utton").clicked == true){
-            val = 6;
-            flagga = true;
-        } else if(document.querySelector(".green3Button").clicked == true){
-            val = 7;
-            flagga = true;
-        } else if(document.querySelector(".green4Button").clicked == true){
-            val = 8;
-            flagga = true;
-        } else{
-            console.WriteLine("något gick fel grön")
-        }
-        
-    }
-}
-
-function blueChoise () {
-    flagga = false;
-    while (flagga = false) {
-        if(document.querySelector(".blue1Button").clicked == true){
-            val = 9;
-            flagga = true
-        } else if(document.querySelector(".blue2Button").clicked == true){
-            val = 10;
-            flagga = true;
-        } else if(document.querySelector(".blue3Button").clicked == true){
-            val = 11;
-            flagga = true;
-        } else if(document.querySelector(".blue4Button").clicked == true){
-            val = 12;
-            flagga = true;
-        } else{
-            console.WriteLine("något gick fel blå")
-        }
-        
-    }
-    
-}
-
-function yellowChoise() {
-    flagga = false;
-    while (flagga = false) {
-        if(document.querySelector(".yellow1Button").clicked == true){
-            val = 13;
-            flagga = true;
-        } else if(document.querySelector(".yellow2Button").clicked == true){
-            val = 14;
-            flagga = true;
-        } else if(document.querySelector(".yellow3Button").clicked == true){
-            val = 15;
-            flagga = true;
-        } else if(document.querySelector(".yellow4Button").clicked == true){
-            val = 16;
-            flagga = true;
-        } else{
-            console.WriteLine("något gick fel gul")
-        }
-        
-    }
-    
-}
 //För att lägga till värdet på tärningen till hur många fler steg spelaren ska ta
 function movePice(steg) {
 
@@ -311,288 +217,6 @@ y3Pos(Yellow3);
 y4Pos(Yellow4);
 }
 
-function somEttAnnat() {
-    if (currentPlayer == 0) {
-        document.querySelector('.red1Button').addEventListener("click", function() {
-            val = 1;
-            movePice(result);
-            upDatePos();
-                currentPlayer++;
-                console.log(currentPlayer);
-           } );
-           document.querySelector('.red2Button').addEventListener("click", function() {
-            val = 2;
-            movePice(result);
-            upDatePos();
-                currentPlayer++;
-                console.log(currentPlayer);
-           } );
-           document.querySelector('.red3Button').addEventListener("click", function() {
-            val = 3;
-            movePice(result);
-            upDatePos();
-                currentPlayer++;
-                console.log(currentPlayer);
-           } );
-           document.querySelector('.red4Button').addEventListener("click", function() {
-            val = 4;
-            movePice(result);
-            upDatePos();
-                currentPlayer++;
-                console.log(currentPlayer);
-           } );
-    } else if(currentPlayer == 1){
-        document.querySelector('.green1Button').addEventListener("click", function() {
-            val = 5;
-            movePice(result);
-            upDatePos();
-                currentPlayer++;
-                console.log(currentPlayer);
-           } );
-           document.querySelector('.green2Button').addEventListener("click", function() {
-            val = 6;
-            movePice(result);
-            upDatePos();
-                currentPlayer++;
-                console.log(currentPlayer);
-           } );
-           document.querySelector('.green3Button').addEventListener("click", function() {
-            val = 7;
-            movePice(result);
-            upDatePos();
-                currentPlayer++;
-                console.log(currentPlayer);
-           } );
-           document.querySelector('.green4Button').addEventListener("click", function() {
-            val = 8;
-            movePice(result);
-            upDatePos();
-                currentPlayer++;
-                console.log(currentPlayer);
-           } );
-    } else if(currentPlayer == 2){
-        document.querySelector('.blue1Button').addEventListener("click", function() {
-            val = 9;
-            movePice(result);
-            upDatePos();
-                currentPlayer++;
-                console.log(currentPlayer);
-           } );
-           document.querySelector('.blue2Button').addEventListener("click", function() {
-            val = 10;
-            movePice(result);
-            upDatePos();
-                currentPlayer++;
-                console.log(currentPlayer);
-           } );
-           document.querySelector('.blue3Button').addEventListener("click", function() {
-            val = 11;
-            movePice(result);
-            upDatePos();
-                currentPlayer++;
-                console.log(currentPlayer);
-           } );
-           document.querySelector('.blue4Button').addEventListener("click", function() {
-            val = 12;
-            movePice(result);
-            upDatePos();
-                currentPlayer++;
-                console.log(currentPlayer);
-           } );
-    } else {
-        document.querySelector('.yellow1Button').addEventListener("click", function() {
-            val = 13;
-            movePice(result);
-            upDatePos();
-                currentPlayer = 0;
-                console.log(currentPlayer);
-           } );
-           document.querySelector('.yellow1Button').addEventListener("click", function() {
-            val = 13;
-            movePice(result);
-            upDatePos();
-                currentPlayer = 0;
-                console.log(currentPlayer);
-           } );
-           document.querySelector('.yellow1Button').addEventListener("click", function() {
-            val = 13;
-            movePice(result);
-            upDatePos();
-                currentPlayer = 0;
-                console.log(currentPlayer);
-           } );
-           document.querySelector('.yellow1Button').addEventListener("click", function() {
-            val = 13;
-            movePice(result);
-            upDatePos();
-                currentPlayer = 0;
-                console.log(currentPlayer);
-           } );
-    }
-    
-}
-
-let currentPlayer = 0;
-function ettAnnat(){
-    switch (currentPlayer) {
-        case 0:
-            
-            document.querySelector('.red1Button').addEventListener("click", function() {
-                val = 1;
-                movePice(result);
-                upDatePos();
-                    currentPlayer++;
-                    console.log(currentPlayer);
-               } );
-               document.querySelector('.red2Button').addEventListener("click", function() {
-                val = 2;
-                movePice(result);
-                upDatePos();
-                    currentPlayer++;
-                    console.log(currentPlayer);
-               } );
-               document.querySelector('.red3Button').addEventListener("click", function() {
-                val = 3;
-                movePice(result);
-                upDatePos();
-                    currentPlayer++;
-                    console.log(currentPlayer);
-               } );
-               document.querySelector('.red4Button').addEventListener("click", function() {
-                val = 4;
-                movePice(result);
-                upDatePos();
-                    currentPlayer++;
-                    console.log(currentPlayer);
-               } );
-
-               document.querySelector('.green1Button').addEventListener("click", function() {
-                val = 5;
-                movePice(result);
-                upDatePos();
-                    currentPlayer++;
-                    console.log(currentPlayer);
-               } );
-               document.querySelector('.green2Button').addEventListener("click", function() {
-                val = 6;
-                movePice(result);
-                upDatePos();
-                    currentPlayer++;
-                    console.log(currentPlayer);
-               } );
-               document.querySelector('.green3Button').addEventListener("click", function() {
-                val = 7;
-                movePice(result);
-                upDatePos();
-                    currentPlayer++;
-                    console.log(currentPlayer);
-               } );
-               document.querySelector('.green4Button').addEventListener("click", function() {
-                val = 8;
-                movePice(result);
-                upDatePos();
-                    currentPlayer++;
-                    console.log(currentPlayer);
-               } );
-            break;
-            case 1:
-                document.querySelector('.green1Button').addEventListener("click", function() {
-                    val = 5;
-                    movePice(result);
-                    upDatePos();
-                        currentPlayer++;
-                        console.log(currentPlayer);
-                   } );
-                   document.querySelector('.green2Button').addEventListener("click", function() {
-                    val = 6;
-                    movePice(result);
-                    upDatePos();
-                        currentPlayer++;
-                        console.log(currentPlayer);
-                   } );
-                   document.querySelector('.green3Button').addEventListener("click", function() {
-                    val = 7;
-                    movePice(result);
-                    upDatePos();
-                        currentPlayer++;
-                        console.log(currentPlayer);
-                   } );
-                   document.querySelector('.green4Button').addEventListener("click", function() {
-                    val = 8;
-                    movePice(result);
-                    upDatePos();
-                        currentPlayer++;
-                        console.log(currentPlayer);
-                   } );
-
-                break;
-            case 2:
-                document.querySelector('.blue1Button').addEventListener("click", function() {
-                    val = 9;
-                    movePice(result);
-                    upDatePos();
-                        currentPlayer++;
-                        console.log(currentPlayer);
-                   } );
-                   document.querySelector('.blue2Button').addEventListener("click", function() {
-                    val = 10;
-                    movePice(result);
-                    upDatePos();
-                        currentPlayer++;
-                        console.log(currentPlayer);
-                   } );
-                   document.querySelector('.blue3Button').addEventListener("click", function() {
-                    val = 11;
-                    movePice(result);
-                    upDatePos();
-                        currentPlayer++;
-                        console.log(currentPlayer);
-                   } );
-                   document.querySelector('.blue4Button').addEventListener("click", function() {
-                    val = 12;
-                    movePice(result);
-                    upDatePos();
-                        currentPlayer++;
-                        console.log(currentPlayer);
-                   } );
-
-                break;
-            case 3:
-                document.querySelector('.yellow1Button').addEventListener("click", function() {
-                    val = 13;
-                    movePice(result);
-                    upDatePos();
-                        currentPlayer = 0;
-                        console.log(currentPlayer);
-                   } );
-                   document.querySelector('.yellow1Button').addEventListener("click", function() {
-                    val = 13;
-                    movePice(result);
-                    upDatePos();
-                        currentPlayer = 0;
-                        console.log(currentPlayer);
-                   } );
-                   document.querySelector('.yellow1Button').addEventListener("click", function() {
-                    val = 13;
-                    movePice(result);
-                    upDatePos();
-                        currentPlayer = 0;
-                        console.log(currentPlayer);
-                   } );
-                   document.querySelector('.yellow1Button').addEventListener("click", function() {
-                    val = 13;
-                    movePice(result);
-                    upDatePos();
-                        currentPlayer = 0;
-                        console.log(currentPlayer);
-                   } );
-
-                break;
-        default:
-            break;
-    }    
-}
-
 //ha koll ifall alla i laget gått i mål
 function checkWinRed() {
     if (Red1 >= 45 && Red2 >= 45 && Red3 >= 45 && Red4 >= 45) {
@@ -669,7 +293,7 @@ function resetGame() {
         Yellow2 = 0;
         Yellow3 = 0;
         Yellow4 = 0;
-        result = 0;
+        result = null;
         printNumber(result);
         document.querySelector(".spel-plan").classList.toggle("invisible");
         document.querySelector(".result").classList.toggle("invisible");
@@ -830,15 +454,9 @@ function somSomEttAnnat() {
 }
 
 //tärning som sen visar vad den fick för värde
-let dice = {
-    sides: 6,
-    roll: function () {
-      return Math.floor(Math.random() * this.sides) + 1;
-    }
-  }
-  
-  //Prints dice roll to the page
-  
+function roll() {
+    return Math.floor(Math.random() * 6) + 1;
+}
   function printNumber(number) {
     let placeholder = document.querySelector('.placeholder');
     placeholder.innerHTML = number;
@@ -846,11 +464,11 @@ let dice = {
   
   let result = 0;
   document.querySelector('.dice').onclick = function() {
-    result = dice.roll();
+    result = roll();
     printNumber(result);
     console.log(currentPlayer);
     
   }
+  //kör funktionerna för att spelet ska funka
 somSomEttAnnat();
 resetGame();
-  
